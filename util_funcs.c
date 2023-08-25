@@ -42,10 +42,10 @@ int isnumber(char *str)
 /**
  * _rotl - rotates the list left
  * @stack: pointer to the top of the stack
- * @line_num: the index of the current line
+ * @line_number: the index of the current line
  *
  */
-void _rotl(stack_t **stack, __attribute__ ((unused))unsigned int line_num)
+void _rotl(stack_t **stack, __attribute__ ((unused))unsigned int line_number)
 {
 	stack_t *runner;
 	int temp1, temp2;
@@ -75,10 +75,10 @@ void _rotl(stack_t **stack, __attribute__ ((unused))unsigned int line_num)
 /**
  * _rotr - rotates the list right
  * @stack: pointer to the top of the stack
- * @line_num: the index of the current line
+ * @line_number: the index of the current line
  *
  */
-void _rotr(stack_t **stack, __attribute__ ((unused))unsigned int line_num)
+void _rotr(stack_t **stack, __attribute__ ((unused))unsigned int line_number)
 {
 	stack_t *runner1, *runner2;
 	int temp1, temp2;
