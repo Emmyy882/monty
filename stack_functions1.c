@@ -7,17 +7,16 @@
  */
 void _push(stack_t **stack, unsigned int line_num)
 {
-	stack_t *new;
 	char *arg;
 	int push_arg;
 
 	push_arg = 0;
-	new = malloc(sizeof(stack_t));
+	/* new = malloc(sizeof(stack_t));
 	if (!new)
 	{
-		printf("Error: malloc failed\n");
+		fprintf(stderr, "Error: malloc failed\n");
 		error_exit(stack);
-	}
+	} */
 
 	arg = strtok(NULL, "\n\t ");
 	if (arg != NULL && isnumber(arg) == 1)

@@ -16,7 +16,7 @@ int main(int ac, char **av)
 	if (ac != 2)
 	{
 		fprintf(stderr, "USAGE: monty file\n");
-		error_exit(&stack);
+		exit(EXIT_FAILURE);
 	}
 	
 	read_file(av[1], &stack);
