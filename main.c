@@ -15,7 +15,7 @@ int main(int ac, char **av)
 	stack = NULL;
 	if (ac != 2)
 	{
-		printf("USAGE: monty file\n");
+		fprintf(stderr, "USAGE: monty file\n");
 		error_exit(&stack);
 	}
 	

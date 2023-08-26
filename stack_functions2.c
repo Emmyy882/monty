@@ -25,7 +25,7 @@ void _pchar(stack_t **stack, unsigned int line_number)
 
 	if (*stack == NULL)
 	{
-		printf("L%d: can't pchar, stack empty\n", line_number);
+		fprintf(stderr, "L%d: can't pchar, stack empty\n", line_number);
 		error_exit(stack);
 	}
 
@@ -34,7 +34,7 @@ void _pchar(stack_t **stack, unsigned int line_number)
 
 	if (!isprint(val))
 	{
-		printf("L%d: can't pchar, value out of range\n", line_number);
+		fprintf(stderr, "L%d: can't pchar, value out of range\n", line_number);
 		error_exit(stack);
 	}
 

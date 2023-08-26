@@ -19,14 +19,14 @@ void _push(stack_t **stack, unsigned int line_num)
 		error_exit(stack);
 	}
 
-	arg = strtok(NULL, "\n ");
-	if (isnumber(arg) == 1 && arg != NULL)
+	arg = strtok(NULL, "\n\t ");
+	if (arg != NULL && isnumber(arg) == 1)
 	{
 		push_arg = atoi(arg);
 	}
 	else
 	{
-		printf("L%d: usage: push integer\n", line_num);
+		fprintf(stderr, "L%d: usage: push integer\n", line_num);
 		error_exit(stack);
 	}
 
@@ -72,7 +72,7 @@ void _pint(stack_t **stack, unsigned int line_num)
 	runner = *stack;
 	if (runner == NULL)
 	{
-		printf("L%d: can't pint, stack empty\n", line_num);
+		fprintf(stderr, "L%d: can't pint, stack empty\n", line_num);
 		
 		error_exit(stack);
 	}
@@ -93,7 +93,7 @@ void _swap(stack_t **stack, unsigned int line_num)
 	runner = *stack;
 	if (runner == NULL || runner->next == NULL)
 	{
-		printf("L%d: can't swap, stack too short\n", line_num);
+		fprintf(stderr, "L%d: can't swap, stack too short\n", line_num);
 		
 		error_exit(stack);
 	}
@@ -112,7 +112,7 @@ void _pop(stack_t **stack, unsigned int line_num)
 {
 	if (*stack == NULL)
 	{
-		printf("L%d: can't pop an empty stack\n", line_num);
+		fprintf(stderr, "L%d: can't pop an empty stack\n", line_num);
 		error_exit(stack);
 	}
 	
